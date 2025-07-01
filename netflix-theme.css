@@ -1,0 +1,164 @@
+/*
+===========================================
+ 🎬 Jellyfin Netflix-Inspired Theme
+===========================================
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  --accent-color: #e50914;
+  --background-color: #141414;
+  --text-color: #ffffff;
+  --card-radius: 8px;
+  --transition-speed: 0.3s;
+}
+
+body, h1, h2, h3, h4, h5 {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+}
+
+.backgroundContainer, .pageContainer {
+  background-color: var(--background-color) !important;
+}
+
+.cardImageContainer,
+.cardScalable,
+.cardOverlayContainer {
+  border-radius: var(--card-radius) !important;
+  overflow: hidden;
+  transition: transform var(--transition-speed) ease;
+}
+
+.cardOverlayContainer:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.cardText, .itemName {
+  color: var(--text-color) !important;
+  font-weight: 500;
+}
+
+.emby-tab-button:hover,
+.button-flat:hover,
+.paper-icon-button-light:hover {
+  color: var(--accent-color) !important;
+}
+
+.playstatebutton-icon-played,
+.ratingbutton-icon-withrating {
+  color: var(--accent-color) !important;
+}
+
+/* Top header bar */
+.skinHeader {
+  background-color: rgba(20, 20, 20, 0.95) !important;
+  border-bottom: 1px solid #333 !important;
+}
+
+/* Focused tab */
+.navMenuOption-selected,
+.emby-tab-button.emby-tab-button-active {
+  color: var(--accent-color) !important;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+/* Detail Page Overlay */
+.itemBackdrop {
+  filter: brightness(30%) blur(30px) !important;
+  background-size: cover !important;
+}
+
+.detailPagePrimaryContainer {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Buttons */
+.emby-button,
+.button-flat,
+.paper-icon-button-light {
+  transition: background-color var(--transition-speed) ease;
+  border-radius: var(--card-radius);
+}
+
+.emby-button:hover {
+  background-color: var(--accent-color) !important;
+  color: #fff !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #222;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+}
+
+/* Login Page Styling */
+#loginPage {
+  background-color: #000 !important;
+  background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/811f9e9e-3d3e-4ef5-b82b-1930b5cf125f/d92e4e56-f65f-48c4-a1b2-1e149dca6821/US-en-20240422-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+#loginPage form {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  border-radius: var(--card-radius);
+  padding: 2em;
+}
+
+/* Footer and extra shadows */
+.innerCardFooter,
+.cardIndicators {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: var(--card-radius);
+}
+
+/* Transitions and interaction */
+.cardOverlayButton,
+.cardOverlayButtonIcon,
+.listItemImage,
+.listItem-content {
+  transition: all var(--transition-speed) ease-in-out;
+}
+
+.cardOverlayButton:hover {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+/* Fix input colors */
+.emby-input,
+.emby-textarea,
+.emby-select-withcolor {
+  background-color: #222 !important;
+  border: 1px solid #444 !important;
+  color: #fff !important;
+  border-radius: var(--card-radius);
+}
+
+.emby-input:focus,
+.emby-textarea:focus,
+.emby-select-withcolor:focus {
+  border: 1px solid var(--accent-color) !important;
+}
+
+/* Watched and progress bars */
+.itemProgressBarForeground {
+  background-color: var(--accent-color) !important;
+}
+
+/* Play button */
+.cardOverlayButtonIcon.playstatebutton-icon-play {
+  color: var(--accent-color) !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 50%;
+  padding: 0.5em;
+}
+
+/* Done! Netflix theme polish */
