@@ -1,0 +1,169 @@
+/* === APPLE TV+ "ECLIPSE" THEME for Jellyfin === */
+
+/* GLOBAL RESET */
+* {
+  box-sizing: border-box !important;
+  transition: all 0.3s ease !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* BACKGROUND */
+body {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* HEADER */
+.skinHeader,
+.headerTop {
+  background: rgba(0, 0, 0, 0.65) !important;
+  backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* TOP MENU */
+.skinHeader .headerButton,
+.skinHeader .headerButton:hover {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  text-transform: none;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+}
+
+.skinHeader .headerButton:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* SECTION TITLES */
+.sectionTitleText,
+.sectionTitle {
+  font-weight: 600 !important;
+  font-size: 1.6rem !important;
+  color: #f1f1f1 !important;
+  border-left: 5px solid #ffffff22;
+  padding-left: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+/* POSTERS */
+.cardBox {
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.05);
+}
+
+.cardBox:hover {
+  transform: scale(1.12);
+  box-shadow: 0 12px 25px rgba(255, 255, 255, 0.1);
+  z-index: 10;
+}
+
+/* TEXT */
+.cardText {
+  color: #cccccc !important;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+/* BUTTONS */
+.button-flat,
+.btnMain {
+  background-color: #ffffff11 !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff22 !important;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.button-flat:hover,
+.btnMain:hover {
+  background-color: #ffffff22 !important;
+}
+
+/* MODALS */
+.dialog,
+.dialogContentInner {
+  background: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(24px) !important;
+  border-radius: 16px !important;
+  color: #ffffff !important;
+}
+
+/* ACTIVE STATES */
+.selected,
+.listItem:focus,
+.listItem:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-left: 4px solid #ffffff66 !important;
+  color: #ffffff !important;
+}
+
+/* INPUTS */
+input,
+select,
+textarea {
+  background-color: #111 !important;
+  color: white !important;
+  border-radius: 8px !important;
+  border: 1px solid #333 !important;
+}
+
+/* LOGIN PAGE */
+#loginPage,
+#loginPage .readOnlyContent {
+  background: url('https://images.unsplash.com/photo-1580632663359-1b2bdbedf3d3?auto=format&fit=crop&w=1920&q=80') no-repeat center center / cover !important;
+  background-color: #000 !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+#loginPage .inputContainer {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+#loginPage h1,
+#loginPage h2 {
+  color: #fff !important;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* LOGIN BUTTONS */
+#loginPage .raised,
+#loginPage .raised:hover {
+  background: #ffffff11 !important;
+  color: white !important;
+  border-radius: 10px;
+}
+
+/* SCROLLBARS */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* TRANSITIONS */
+.page,
+.cardBox,
+.skinHeader,
+.dialog {
+  transition: all 0.4s ease-in-out !important;
+}
+
+/* FOOTER */
+.footer {
+  background: transparent !important;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 1rem;
+  color: #888 !important;
+}
