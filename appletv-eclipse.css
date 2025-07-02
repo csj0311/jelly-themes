@@ -1,12 +1,13 @@
-/* ---------------- Apple TV+ Theme – Clean & Working ---------------- */
+/* ---------------- Apple TV+ Theme – Stable & Clean ---------------- */
 
+/* Base colors and typography */
 html, body {
   background-color: #0d0d0d !important;
   color: #ffffff !important;
   font-family: 'Segoe UI', 'Helvetica Neue', sans-serif !important;
 }
 
-/* Top header */
+/* Header and navigation */
 .skinHeader, .headerTabs, .emby-tab-button {
   background-color: #0d0d0d !important;
   color: #fff !important;
@@ -14,53 +15,62 @@ html, body {
   box-shadow: none !important;
 }
 
-/* Posters + cards */
+/* Sidebar menu — keep visible */
+.mainDrawer {
+  background-color: #0d0d0d !important;
+  border-right: 1px solid #1a1a1a !important;
+}
+
+/* Cards/posters */
 .cardBox, .cardPadder, .cardContent {
   background: none !important;
   border: none !important;
   box-shadow: none !important;
 }
 
-/* Make sure images appear */
+/* Ensure images show properly */
 .cardImageContainer, .cardImage, .primaryImageWrapper {
   opacity: 1 !important;
   filter: none !important;
   background-size: cover !important;
 }
 
-/* Remove overlays/icons/buttons */
-.cardOverlayButton, .cardOverlayButtonIcon,
-.cardButtons, .cardIndicators, .itemAction, 
-.cardFooter, .innerCardFooter,
-.material-icons, .listItem-overflowMenu,
-.detailRibbon, .mediaInfoItem,
-.cardBox::after, .cardBox::before,
-.cardScalable::after, .cardScalable::before {
+/* Clean poster style */
+.cardScalable {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-color: transparent !important;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.cardScalable:hover {
+  transform: scale(1.08);
+  z-index: 5;
+  box-shadow: 0 16px 40px rgba(255, 255, 255, 0.08);
+}
+
+/* Remove floating overlays/icons */
+.cardOverlayButton,
+.cardOverlayButtonIcon,
+.cardButtons,
+.cardIndicators,
+.itemAction,
+.cardFooter,
+.innerCardFooter,
+.material-icons,
+.listItem-overflowMenu,
+.detailRibbon,
+.mediaInfoItem,
+.cardBox::after,
+.cardBox::before,
+.cardScalable::after,
+.cardScalable::before {
   display: none !important;
 }
 
-/* Poster hover effect */
-.cardScalable {
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-.cardScalable:hover {
-  transform: scale(1.07);
-  z-index: 5;
-  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.15);
-}
-
-.mainDrawer {
-  width: 0 !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-
-}
-
-/* Title style */
-.itemName {
+/* Section titles */
+.sectionTitle, .itemName {
   color: #ffffff !important;
   font-weight: 600 !important;
-  text-align: left !important;
   font-size: 1rem !important;
 }
 
@@ -75,7 +85,7 @@ html, body {
   padding: 2rem;
 }
 
-/* Small screen adjustments */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .cardScalable:hover {
     transform: scale(1.03);
