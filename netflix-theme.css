@@ -1,95 +1,160 @@
-/* ---- Netflix-Style Clean Theme (No Arrows, Basic) ---- */
-
-/* Background and font */
-html, body {
-  background-color: #141414 !important;
-  color: white !important;
-  font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+/* GLOBAL RESET */
+* {
+  box-sizing: border-box !important;
+  transition: all 0.3s ease !important;
 }
 
-/* Sidebar and header */
-.skinHeader, .headerTabs, .mainDrawer {
-  background-color: #141414 !important;
-  color: white !important;
+/* BASE */
+body {
+  background: radial-gradient(circle at top, #141414, #000000) !important;
+  color: #ffffff !important;
+  font-family: 'Segoe UI', sans-serif !important;
+}
+
+/* HEADER + NAV */
+.headerTop,
+.skinHeader,
+.detailPagePrimaryContent {
+  background: rgba(0, 0, 0, 0.65) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skinHeader .headerButton,
+.skinHeader .headerButton:hover {
+  color: #fff !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+}
+
+/* SECTION TITLES */
+.sectionTitle,
+.sectionTitleText {
+  color: #fff !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  font-size: 1.4rem !important;
+  display: inline-block;
+  padding-bottom: 4px;
+  border-bottom: none !important; /* Removed red underline */
+}
+
+/* POSTERS */
+.cardBox {
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardBox:hover {
+  transform: scale(1.15);
+  z-index: 10;
+  box-shadow: 0 12px 25px rgba(255, 0, 0, 0.5);
+}
+
+/* BUTTONS */
+.button-flat,
+.btnMain {
+  background: linear-gradient(135deg, #e50914, #b81d24) !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
   border: none !important;
-  box-shadow: none !important;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
-/* Remove red arrow/chevron after titles */
-.sectionTitle::after {
-  content: none !important;
+.button-flat:hover,
+.btnMain:hover {
+  background: linear-gradient(135deg, #ff002f, #c51d2d) !important;
+  transform: scale(1.05);
 }
 
-/* Titles styling */
-.sectionTitle {
-  color: white !important;
-  font-weight: bold !important;
-  text-decoration: underline red 3px;
-  text-underline-offset: 6px;
-  margin-bottom: 0.5em;
-}
-
-/* Cards styling */
-.cardBox, .cardPadder, .cardContent {
-  background: none !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-/* Poster image */
-.cardImageContainer, .cardImage, .primaryImageWrapper {
-  filter: none !important;
-  opacity: 1 !important;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-}
-
-/* Remove overlays/buttons on cards */
-.cardOverlayButton,
-.cardOverlayButtonIcon,
-.cardButtons,
-.cardIndicators,
-.material-icons,
-.listItem-overflowMenu,
-.itemAction,
-.cardFooter,
-.innerCardFooter {
-  display: none !important;
-}
-
-/* Smooth hover zoom and subtle shadow */
-.cardScalable {
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  border-radius: 6px;
-  overflow: hidden;
-  background-color: transparent !important;
-}
-.cardScalable:hover {
-  transform: scale(1.07);
-  box-shadow: 0 16px 40px rgba(255, 0, 0, 0.3);
-}
-
-/* Menu tab active highlight */
-.emby-tab-button.active {
-  border-bottom: 3px solid #e50914 !important;
-  color: white !important;
-  font-weight: bold !important;
-}
-
-/* Scrollbar for side menu */
-.mainDrawer {
-  scrollbar-width: thin;
-  scrollbar-color: #e50914 transparent;
-}
-.mainDrawer::-webkit-scrollbar {
+/* SCROLLBARS */
+::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
-.mainDrawer::-webkit-scrollbar-thumb {
-  background-color: #e50914;
-  border-radius: 10px;
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #e50914;
+  border-radius: 8px;
 }
 
-/* Login page */
-.loginPage {
-  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/e3ef6b31-659b-42bc-b674-007e3c0e5d69/1b09a96d-c311-4d98-86a1-b09f38a8ed85/US-en-20230731-popsignuptwoweeks-perspective_alpha_website_small.jpg") center center / cover no-repeat !important;
+/* MODALS & DIALOGS */
+.dialog,
+.dialogContentInner {
+  background: rgba(20, 20, 20, 0.95) !important;
+  color: #fff !important;
+  border-radius: 12px !important;
+}
+
+/* ACTIVE MENU ITEMS */
+.selected,
+.listItem:focus,
+.listItem:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-left: none !important; /* Removed red left border */
+  font-weight: 600;
+  color: #ffffff !important;
+}
+
+/* FOOTER */
+.footer {
+  background: rgba(0, 0, 0, 0.5) !important;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* HOVER GLOW */
+.emby-tab-button:hover,
+.listItem:hover {
+  color: #fff !important;
+  text-shadow: 0 0 4px #e50914;
+}
+
+/* LOGIN SCREEN */
+#loginPage,
+#loginPage .readOnlyContent {
+  background: linear-gradient(to top, #000000, #1a1a1a, #141414) !important;
+  color: white !important;
+}
+
+#loginPage .inputContainer {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+#loginPage h1,
+#loginPage h2 {
+  color: #ffffff !important;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* LOGIN BUTTONS */
+#loginPage .raised,
+#loginPage .raised:hover {
+  background-color: #e50914 !important;
+  color: white !important;
+  border-radius: 8px;
+}
+
+/* TRANSITIONS */
+.page,
+.mainDrawer,
+dialog,
+.cardBox,
+.headerTop {
+  transition: all 0.4s ease-in-out !important;
+}
+
+/* CARD TEXT */
+.cardText {
+  color: #ccc !important;
+  font-weight: 500;
 }
