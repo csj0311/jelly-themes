@@ -1,124 +1,84 @@
-/* ------------------ Apple TV+ Inspired Jellyfin Theme (Stable) ------------------ */
+/* ---------------- Apple TV+ Theme – Clean & Working ---------------- */
 
-/* Base styling */
 html, body {
   background-color: #0d0d0d !important;
   color: #ffffff !important;
   font-family: 'Segoe UI', 'Helvetica Neue', sans-serif !important;
 }
 
-/* Header & nav */
-.headerTabs,
-.skinHeader,
-.paper-icon-button-light,
-.emby-tab-button,
-.page {
+/* Top header */
+.skinHeader, .headerTabs, .emby-tab-button {
   background-color: #0d0d0d !important;
-  box-shadow: none !important;
-  border: none !important;
   color: #fff !important;
-}
-
-/* Poster layout */
-.cardBox,
-.cardContent,
-.cardPadder {
-  background: transparent !important;
   border: none !important;
   box-shadow: none !important;
 }
 
-/* Fix image rendering */
-.cardImageContainer,
-.cardImage,
-.primaryImageWrapper {
-  display: block !important;
+/* Posters + cards */
+.cardBox, .cardPadder, .cardContent {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Make sure images appear */
+.cardImageContainer, .cardImage, .primaryImageWrapper {
   opacity: 1 !important;
   filter: none !important;
   background-size: cover !important;
-  background-repeat: no-repeat !important;
 }
 
-/* Poster Hover Animation */
+/* Remove overlays/icons/buttons */
+.cardOverlayButton, .cardOverlayButtonIcon,
+.cardButtons, .cardIndicators, .itemAction, 
+.cardFooter, .innerCardFooter,
+.material-icons, .listItem-overflowMenu,
+.detailRibbon, .mediaInfoItem,
+.cardBox::after, .cardBox::before,
+.cardScalable::after, .cardScalable::before {
+  display: none !important;
+}
+
+/* Poster hover effect */
 .cardScalable {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .cardScalable:hover {
-  transform: scale(1.08);
-  z-index: 2;
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+  transform: scale(1.07);
+  z-index: 5;
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.15);
 }
 
-/* Hide extra UI elements */
-.cardOverlayContainer,
-.cardButtons,
-.itemAction,
-.innerCardFooter,
-.overflowBackdrop,
-.cardFooter,
-.cardIndicators,
-.listItem-overflowMenu,
-.detailRibbon,
-.cardBox::after,
-.cardBox::before,
-.cardScalable::after,
-.cardScalable::before,
-.material-icons,
-button::before,
-button::after,
-a::before,
-a::after,
-.layout-desktop .footer,
-.listItemIndicators,
-.mediaInfoItem {
+/* Hide left menu drawer */
+.mainDrawer {
   display: none !important;
-  content: none !important;
 }
 
-/* Title text */
+/* Title style */
 .itemName {
   color: #ffffff !important;
   font-weight: 600 !important;
-  text-transform: none !important;
-  font-size: 1.05rem !important;
   text-align: left !important;
-  padding-top: 0.3rem;
+  font-size: 1rem !important;
 }
 
-/* Login screen */
+/* Login background */
 .loginPage {
   background: url("https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1920&q=80") center center / cover no-repeat !important;
   backdrop-filter: blur(6px);
 }
-
 .loginPage .readOnlyContent {
   background-color: rgba(0, 0, 0, 0.6) !important;
   border-radius: 16px;
   padding: 2rem;
 }
 
-/* Side Menu (Optional Hide) */
-.mainDrawer {
-  display: none !important;
-}
-
-/* Optional - Show menu button (top left hamburger) */
-.headerLeft,
-.headerTop {
-  padding-left: 0.5rem;
-}
-
-.emby-tab-button:hover {
-  background-color: #1a1a1a !important;
-  color: #ffffff !important;
-}
-
-/* Mobile tweaks */
+/* Small screen adjustments */
 @media (max-width: 768px) {
   .cardScalable:hover {
-    transform: scale(1.04);
+    transform: scale(1.03);
   }
   .itemName {
-    font-size: 0.95rem !important;
+    font-size: 0.9rem !important;
   }
 }
