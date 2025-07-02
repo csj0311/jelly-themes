@@ -1,16 +1,17 @@
-/* Base: Apple dark aesthetic */
+/* ------------------ Apple TV+ Inspired Jellyfin Theme (Stable) ------------------ */
+
+/* Base styling */
 html, body {
   background-color: #0d0d0d !important;
-  color: #fff !important;
+  color: #ffffff !important;
   font-family: 'Segoe UI', 'Helvetica Neue', sans-serif !important;
 }
 
-/* Header bar and menus */
+/* Header & nav */
 .headerTabs,
 .skinHeader,
 .paper-icon-button-light,
 .emby-tab-button,
-.dialog,
 .page {
   background-color: #0d0d0d !important;
   box-shadow: none !important;
@@ -18,37 +19,42 @@ html, body {
   color: #fff !important;
 }
 
-.emby-tab-button:hover {
-  color: #ffffff !important;
-  background-color: #1a1a1a !important;
-}
-
-/* Poster Cards */
+/* Poster layout */
 .cardBox,
 .cardContent,
-.cardScalable,
 .cardPadder {
-  background: none !important;
+  background: transparent !important;
   border: none !important;
   box-shadow: none !important;
 }
 
-/* Poster Hover Animation */
-.cardScalable:hover {
-  transform: scale(1.08);
-  transition: transform 0.3s ease-in-out;
-  z-index: 2;
-  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
+/* Fix image rendering */
+.cardImageContainer,
+.cardImage,
+.primaryImageWrapper {
+  display: block !important;
+  opacity: 1 !important;
+  filter: none !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 }
 
-/* Remove overlays, icons, buttons, extras */
+/* Poster Hover Animation */
+.cardScalable {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.cardScalable:hover {
+  transform: scale(1.08);
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+}
+
+/* Hide extra UI elements */
 .cardOverlayContainer,
-.cardOverlayButton,
 .cardButtons,
 .itemAction,
 .innerCardFooter,
 .overflowBackdrop,
-.overflowIndicator,
 .cardFooter,
 .cardIndicators,
 .listItem-overflowMenu,
@@ -56,24 +62,20 @@ html, body {
 .cardBox::after,
 .cardBox::before,
 .cardScalable::after,
-.cardScalable::before {
-  display: none !important;
-  content: none !important;
-}
-
-/* Kill Material Icons, ghost chevrons, weird arrows */
+.cardScalable::before,
 .material-icons,
-[class*="material-icons"],
 button::before,
 button::after,
 a::before,
-a::after {
+a::after,
+.layout-desktop .footer,
+.listItemIndicators,
+.mediaInfoItem {
   display: none !important;
-  font-family: inherit !important;
   content: none !important;
 }
 
-/* Titles (Apple TV+ style) */
+/* Title text */
 .itemName {
   color: #ffffff !important;
   font-weight: 600 !important;
@@ -83,14 +85,7 @@ a::after {
   padding-top: 0.3rem;
 }
 
-/* Clean Up Icons and Footer */
-.layout-desktop .footer,
-.listItemIndicators,
-.mediaInfoItem {
-  display: none !important;
-}
-
-/* Login Page Custom Background (AppleTV style) */
+/* Login screen */
 .loginPage {
   background: url("https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1920&q=80") center center / cover no-repeat !important;
   backdrop-filter: blur(6px);
@@ -102,11 +97,20 @@ a::after {
   padding: 2rem;
 }
 
-/* Remove backdrops and extra detail views */
-.backdropImage,
-.backgroundContainer,
-.detailImageContainer {
+/* Side Menu (Optional Hide) */
+.mainDrawer {
   display: none !important;
+}
+
+/* Optional - Show menu button (top left hamburger) */
+.headerLeft,
+.headerTop {
+  padding-left: 0.5rem;
+}
+
+.emby-tab-button:hover {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
 }
 
 /* Mobile tweaks */
