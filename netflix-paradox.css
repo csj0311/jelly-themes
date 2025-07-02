@@ -1,4 +1,4 @@
-/* NETFLIX-PARADOX THEME for Jellyfin */
+/* === NETFLIX-PARADOX THEME v2 === */
 
 /* GLOBAL RESET */
 * {
@@ -6,33 +6,51 @@
   transition: all 0.3s ease !important;
 }
 
-/* BACKGROUND */
+/* BASE */
 body {
   background: radial-gradient(circle at top, #141414, #000000) !important;
   color: #ffffff !important;
   font-family: 'Segoe UI', sans-serif !important;
 }
 
-/* HEADER */
+/* HEADER + NAV */
 .headerTop,
 .skinHeader,
 .sectionTitle,
 .detailPagePrimaryContent {
-  background: rgba(0, 0, 0, 0.6) !important;
-  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.65) !important;
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skinHeader .headerButton,
+.skinHeader .headerButton:hover {
+  color: #fff !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+}
+
+/* SECTION TITLES */
+.sectionTitle,
+.sectionTitleText {
+  color: #fff !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  font-size: 1.4rem !important;
 }
 
 /* POSTERS */
 .cardBox {
   border-radius: 12px !important;
   overflow: hidden !important;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cardBox:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 25px rgba(255, 0, 0, 0.4);
+  transform: scale(1.15);
+  z-index: 10;
+  box-shadow: 0 12px 25px rgba(255, 0, 0, 0.5);
 }
 
 /* BUTTONS */
@@ -42,6 +60,8 @@ body {
   color: #ffffff !important;
   border-radius: 8px !important;
   border: none !important;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .button-flat:hover,
@@ -71,17 +91,14 @@ body {
   border-radius: 12px !important;
 }
 
-/* HIGHLIGHT ELEMENTS */
-h1, h2, h3, .sectionTitle {
-  color: #e50914 !important;
-}
-
-/* ACTIVE ITEMS */
+/* ACTIVE MENU ITEMS */
 .selected,
 .listItem:focus,
 .listItem:hover {
   background: rgba(255, 255, 255, 0.05) !important;
   border-left: 4px solid #e50914 !important;
+  font-weight: 600;
+  color: #ffffff !important;
 }
 
 /* FOOTER */
@@ -90,6 +107,41 @@ h1, h2, h3, .sectionTitle {
   font-size: 0.8rem;
   text-align: center;
   padding: 1rem;
+}
+
+/* HOVER GLOW */
+.emby-tab-button:hover,
+.listItem:hover {
+  color: #fff !important;
+  text-shadow: 0 0 4px #e50914;
+}
+
+/* LOGIN SCREEN */
+#loginPage,
+#loginPage .readOnlyContent {
+  background: linear-gradient(to top, #000000, #1a1a1a, #141414) !important;
+  color: white !important;
+}
+
+#loginPage .inputContainer {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+#loginPage h1,
+#loginPage h2 {
+  color: #ffffff !important;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* LOGIN BUTTONS */
+#loginPage .raised,
+#loginPage .raised:hover {
+  background-color: #e50914 !important;
+  color: white !important;
+  border-radius: 8px;
 }
 
 /* TRANSITIONS */
@@ -101,16 +153,8 @@ dialog,
   transition: all 0.4s ease-in-out !important;
 }
 
-/* EXTRAS */
-.emby-tab-button:hover {
-  color: #e50914 !important;
-}
-
-.playstatebutton-icon-play,
-.playstatebutton-icon-pause {
-  filter: drop-shadow(0 0 2px #e50914);
-}
-
+/* CARD TEXT */
 .cardText {
   color: #ccc !important;
+  font-weight: 500;
 }
