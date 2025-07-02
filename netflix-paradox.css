@@ -1,4 +1,4 @@
-/* === NETFLIX-PARADOX THEME v2 === */
+/* === NETFLIX-PARADOX THEME v3 === (Arrow Removed) */
 
 /* GLOBAL RESET */
 * {
@@ -16,7 +16,6 @@ body {
 /* HEADER + NAV */
 .headerTop,
 .skinHeader,
-.sectionTitle,
 .detailPagePrimaryContent {
   background: rgba(0, 0, 0, 0.65) !important;
   backdrop-filter: blur(12px);
@@ -37,6 +36,9 @@ body {
   font-weight: 700 !important;
   text-transform: uppercase !important;
   font-size: 1.4rem !important;
+  display: inline-block;
+  padding-bottom: 4px;
+  border-bottom: 4px solid #e50914 !important; /* red underline */
 }
 
 /* POSTERS */
