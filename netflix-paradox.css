@@ -1,0 +1,116 @@
+/* NETFLIX-PARADOX THEME for Jellyfin */
+
+/* GLOBAL RESET */
+* {
+  box-sizing: border-box !important;
+  transition: all 0.3s ease !important;
+}
+
+/* BACKGROUND */
+body {
+  background: radial-gradient(circle at top, #141414, #000000) !important;
+  color: #ffffff !important;
+  font-family: 'Segoe UI', sans-serif !important;
+}
+
+/* HEADER */
+.headerTop,
+.skinHeader,
+.sectionTitle,
+.detailPagePrimaryContent {
+  background: rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* POSTERS */
+.cardBox {
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.cardBox:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(255, 0, 0, 0.4);
+}
+
+/* BUTTONS */
+.button-flat,
+.btnMain {
+  background: linear-gradient(135deg, #e50914, #b81d24) !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+  border: none !important;
+}
+
+.button-flat:hover,
+.btnMain:hover {
+  background: linear-gradient(135deg, #ff002f, #c51d2d) !important;
+  transform: scale(1.05);
+}
+
+/* SCROLLBARS */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #e50914;
+  border-radius: 8px;
+}
+
+/* MODALS & DIALOGS */
+.dialog,
+.dialogContentInner {
+  background: rgba(20, 20, 20, 0.95) !important;
+  color: #fff !important;
+  border-radius: 12px !important;
+}
+
+/* HIGHLIGHT ELEMENTS */
+h1, h2, h3, .sectionTitle {
+  color: #e50914 !important;
+}
+
+/* ACTIVE ITEMS */
+.selected,
+.listItem:focus,
+.listItem:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-left: 4px solid #e50914 !important;
+}
+
+/* FOOTER */
+.footer {
+  background: rgba(0, 0, 0, 0.5) !important;
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* TRANSITIONS */
+.page,
+.mainDrawer,
+dialog,
+.cardBox,
+.headerTop {
+  transition: all 0.4s ease-in-out !important;
+}
+
+/* EXTRAS */
+.emby-tab-button:hover {
+  color: #e50914 !important;
+}
+
+.playstatebutton-icon-play,
+.playstatebutton-icon-pause {
+  filter: drop-shadow(0 0 2px #e50914);
+}
+
+.cardText {
+  color: #ccc !important;
+}
