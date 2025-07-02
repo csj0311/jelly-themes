@@ -49,9 +49,11 @@ html, body {
   box-shadow: 0 12px 30px rgba(255, 255, 255, 0.15);
 }
 
-/* Hide left menu drawer */
 .mainDrawer {
-  display: none !important;
+  width: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+
 }
 
 /* Title style */
